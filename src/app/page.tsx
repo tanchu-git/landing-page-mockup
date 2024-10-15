@@ -28,7 +28,8 @@ export default function Home() {
               <a href="#">Pricing</a>
               <a href="#">Customers</a>
               <a href="#">Help</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">Free trial</button>
+              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items
+                justify-center tracking-tight">Free trial</button>
             </nav>
           </div>
         </div>
