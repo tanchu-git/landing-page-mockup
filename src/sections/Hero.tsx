@@ -1,6 +1,5 @@
 import ArrowRight from "@/assets/arrow-right.svg";
 import bipcardsPhone from "@/assets/bipcards_phone.webp";
-import BipcardsLogo from "@/assets/bipcards_logo.svg"
 import Image from "next/image";
 
 export const Hero = () => {
@@ -12,8 +11,7 @@ export const Hero = () => {
         {/* md:flex - all elements are inlined as long as screen > medium sized */}
         <div className="md:flex items-center">
           <div className="md:w-[600px]">
-            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 
-              rounded-lg tracking-tight">
+            <div className="tag">
                 Engage with your customers
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black
@@ -33,8 +31,7 @@ export const Hero = () => {
             </div>
           </div>          
           <div className="mt-20 md:mt-0 md:ml-7 md:flex relative">            
-            <Image src={bipcardsPhone} alt="Bipcards Phone" />
-            <BipcardsLogo className="absolute -bottom-2 -left-30" />            
+            <Image src={bipcardsPhone} alt="Bipcards Phone" />           
           </div>          
         </div>
       </div>
