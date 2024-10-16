@@ -9,8 +9,8 @@ const pricingTiers = [
     popular: false,
     inverse: false,
     features: [
-      "1 business loaction",
-      "Unlimited data analysis",
+      "1 business location",
+      "AI powered data analysis",
       "1 Bip card",
       "1 Bip disk",
       "Basic support",
@@ -23,8 +23,8 @@ const pricingTiers = [
     popular: true,
     inverse: true,
     features: [
-      "Up to 5 business loactions",
-      "Unlimited data analysis",
+      "Up to 5 business locations",
+      "AI powered data analysis",
       "Up to 10 Bip card",
       "Up to 10 Bip disk",
       "Priority support",
@@ -38,14 +38,13 @@ const pricingTiers = [
     popular: false,
     inverse: false,
     features: [
-      "Up to 10 business loactions",
-      "Unlimited data analysis",
+      "Up to 10 business locations",
+      "AI powered data analysis",
       "Up to 20 Bip card",
       "Up to 20 Bip disk",
       "Priority support",
       "Dedicated account manager",
       "Export capabilities",
-      "API access",
     ],
   },
 ];
@@ -59,7 +58,7 @@ export const Pricing = () => {
             Pricing
           </h2>        
           <p className="section-description mt-5">
-            Our tiered pricing offers a flexible feature set.
+            Our flexible feature set covers all your needs.
           </p>
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
@@ -74,7 +73,7 @@ export const Pricing = () => {
             }) => (
               // twMerge - define 2 different props for the same element, pick one depending on condition
               <div className={twMerge(
-                  "p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full", 
+                  "p-10 border border-[#7e7b7b] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full", 
                   inverse && "border-black bg-black text-white"
                 )}>
                 <div className="flex justify-between">
@@ -97,7 +96,7 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     {monthlyPrice} kr
                   </span>
-                  <span className="tracking-tight font-bold text-black/50">
+                  <span className="tracking-tight font-bold">
                     /month
                   </span>
                 </div>

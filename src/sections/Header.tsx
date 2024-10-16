@@ -18,7 +18,7 @@ export const Header = () => {
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
-            <BipcardsLogo className="scale-75" />
+            <BipcardsLogo className="w-48" />
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
               <a href="#">About</a>

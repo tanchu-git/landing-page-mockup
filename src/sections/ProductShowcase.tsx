@@ -7,10 +7,10 @@ export const ProductShowcase = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Deep dive into your business data</div>
+            <div className="tag">Explore your business data</div>
           </div>
           <h2 className="section-title mt-5">
-            Gain competitive advantage and improve your rating
+            Drive engagements and improve your rating
           </h2>
           <p className="section-description mt-5">
             Powered by AI, our analytics service will cut through the noise, 
