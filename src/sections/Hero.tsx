@@ -20,7 +20,7 @@ export const Hero = () => {
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
               Dive in to your business data and analyze, discern from
-              your customers, and get recommendations on improving your engagements.
+              your customers, and get guidance on improving your engagements.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <button className="btn btn-primary">Start your trial</button>
