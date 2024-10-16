@@ -12,8 +12,8 @@ const pricingTiers = [
     features: [
       "1 business location",
       "AI powered data analysis",
-      "1 Bip card",
-      "1 Bip disk",
+      "5 Bipcards",
+      "5 BipQR",
       "Basic support",
     ],
   },
@@ -27,8 +27,8 @@ const pricingTiers = [
     features: [
       "Up to 5 business locations",
       "AI powered data analysis",
-      "Up to 10 Bip card",
-      "Up to 10 Bip disk",
+      "25 Bipcards",
+      "25 BipQR",
       "Priority support",
       "Dedicated account manager",
     ],
@@ -43,8 +43,8 @@ const pricingTiers = [
     features: [
       "Up to 10 business locations",
       "AI powered data analysis",
-      "Up to 20 Bip card",
-      "Up to 20 Bip disk",
+      "50 Bipcards",
+      "50 BipQR",
       "Priority support",
       "Dedicated account manager",
       "Export capabilities",
