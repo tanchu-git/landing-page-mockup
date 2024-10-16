@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
   {
+    id: 1,
     title: "Entry",
     monthlyPrice: 99,
     buttonText: "Sign up now",
@@ -17,6 +18,7 @@ const pricingTiers = [
     ],
   },
   {
+    id: 2,
     title: "Pro",
     monthlyPrice: 149,
     buttonText: "Sign up now",
@@ -32,6 +34,7 @@ const pricingTiers = [
     ],
   },
   {
+    id: 3,
     title: "Business",
     monthlyPrice: 199,
     buttonText: "Sign up now",
@@ -63,7 +66,8 @@ export const Pricing = () => {
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(
-            ({ 
+            ({
+              id,
               title, 
               monthlyPrice,
               buttonText, 
@@ -72,8 +76,8 @@ export const Pricing = () => {
               features 
             }) => (
               // twMerge - define 2 different props for the same element, pick one depending on condition
-              <div className={twMerge(
-                  "p-10 border border-[#7e7b7b] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full", 
+              <div key={id} className={twMerge(
+                  "p-10 border border-[#7a7a7a] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full", 
                   inverse && "border-black bg-black text-white"
                 )}>
                 <div className="flex justify-between">
@@ -108,7 +112,7 @@ export const Pricing = () => {
                 </button>
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature) => (
-                      <li className="text-sm flex items-center gap-4">
+                      <li key={id} className="text-sm flex items-center gap-4">
                         <CheckIcon className="h-6 w-6" />
                         <span>{feature}</span>
                       </li>

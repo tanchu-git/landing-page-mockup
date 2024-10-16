@@ -6,7 +6,6 @@ import { Pricing } from "@/sections/Pricing";
 
 export default function Home() {
   return (
-    // Header
     <>      
       <Header />
       <Hero />

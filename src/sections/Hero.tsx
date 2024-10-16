@@ -12,15 +12,15 @@ export const Hero = () => {
         <div className="md:flex items-center">
           <div className="md:w-[600px]">
             <div className="tag">
-                Engage with your customers
+              Engage with your customers
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black
               to-[#001E80] text-transparent bg-clip-text mt-6">
               Tap to gain business insight and growth
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Dive in to your business data and analyze your customers, track
-              your engagements, and gain insight about competitors.
+              Dive in to your business data and analyze, discern from
+              your customers, and get recommendations on improving your engagements.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <button className="btn btn-primary">Start your trial</button>
