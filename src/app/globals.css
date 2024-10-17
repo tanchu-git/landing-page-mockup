@@ -27,4 +27,7 @@
     .section-heading {
         @apply max-w-[700px] mx-auto
     }
+    .card {
+        @apply p-10 border border-[#7a7a7a] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+    }
 }

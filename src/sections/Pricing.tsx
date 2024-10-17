@@ -54,11 +54,14 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title">
-            Pricing
+          <div className="flex justify-center">
+            <div className="tag">Subscription</div>
+          </div>
+          <h2 className="section-title mt-5">
+            Tiered pricing
           </h2>        
           <p className="section-description mt-5">
             Our flexible feature set covers all your needs.
@@ -77,7 +80,7 @@ export const Pricing = () => {
             }) => (
               // twMerge - define 2 different props for the same element, pick one depending on condition
               <div key={id} className={twMerge(
-                  "p-10 border border-[#7a7a7a] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full", 
+                  "card", 
                   inverse && "border-black bg-black text-white"
                 )}>
                 <div className="flex justify-between">
