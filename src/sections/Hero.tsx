@@ -1,5 +1,5 @@
 import ArrowRight from "@/assets/arrow-right.svg";
-import bipcardsPhone from "@/assets/bipcards_phone.webp";
+import bipcardsPhone from "@/assets/bipcards_phone.png";
 import Image from "next/image";
 
 export const Hero = () => {
@@ -14,16 +14,16 @@ export const Hero = () => {
             <div className="tag">
               Engage with your customers
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black
               to-[#001E80] text-transparent bg-clip-text mt-6">
               Tap to gain business insight and growth
-            </h1>
+            </h2>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
               Dive in to your business data and analyze, discern from
               your customers, and get guidance on improving your engagements.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Start your trial</button>
+              <button className="btn btn-primary">Sign up</button>
               <button className="btn btn-text gap-1">
                 <span>Learn more</span>
                 <ArrowRight className="h-5 w-5" />
