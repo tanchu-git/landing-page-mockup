@@ -13,54 +13,63 @@ import { twMerge } from "tailwind-merge";
 // mock data
 const testimonials = [
   {
+    id: 1,
     text: "As a seasoned small business owner always on the lookout for innovative tools, this instantly grabbed my attention.",
     imageSrc: avatar1.src,
     name: "Jamie Rivera",
     username: "@jamietechguru00",
   },
   {
+    id: 2,
     text: "Our growth has skyrocketed since we started using this tool.",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
   },
   {
+    id: 3,
     text: "This app has completely transformed how I manage my businesses.",
     imageSrc: avatar3.src,
     name: "Morgan Lee",
     username: "@morganleewhiz",
   },
   {
+    id: 4,
     text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
     imageSrc: avatar4.src,
     name: "Casey Jordan",
     username: "@caseyj",
   },
   {
+    id: 5,
     text: "Planning and executing business strategies has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
     imageSrc: avatar5.src,
     name: "Taylor Kim",
     username: "@taylorkimm",
   },
   {
+    id: 6,
     text: "The AI capabilities of this app are top-notch.",
     imageSrc: avatar6.src,
     name: "Riley Smith",
     username: "@rileysmith1",
   },
   {
+    id: 7,
     text: "Adopting this app for our team has streamlined our workflow.",
     imageSrc: avatar7.src,
     name: "Jordan Patels",
     username: "@jpatelsdesign",
   },
   {
+    id: 8,
     text: "With this app, we can easily analyze data, track progress, and manage the business all in one place.",
     imageSrc: avatar8.src,
     name: "Sam Dawson",
     username: "@dawsontechtips",
   },
   {
+    id: 9,
     text: "Its user-friendly interface and robust features support our specific needs.",
     imageSrc: avatar9.src,
     name: "Casey Harper",
@@ -82,9 +91,9 @@ const TestimonialsColumn = (props: {
     props.className
     )}
   >
-  {/* image source is a string, need to specify the height and width */}
-  {props.testimonials.map(({ text, imageSrc, name, username }) => (
-      <div className="card">
+  {/* imageSrc is a string, need to specify the height and width */}
+  {props.testimonials.map(({ id, text, imageSrc, name, username }) => (
+      <div key={id} className="card">
         <div>{text}</div>
         {/* flex - stack in row */}
         <div className="flex items-center gap-2 mt-5">
