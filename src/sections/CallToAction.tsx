@@ -15,7 +15,7 @@ export const CallToAction = () => {
         <div className="flex gap- mt-10 justify-center">
           <button className="btn btn-primary">Sign up</button>
           <button className="btn btn-text gap-1">
-            <span>Learn more</span>
+            <span>Got questions?</span>
             <ArrowRight className="h-5 w-5"/>
           </button>               
         </div>
