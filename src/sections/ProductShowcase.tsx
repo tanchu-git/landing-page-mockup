@@ -1,11 +1,23 @@
+"use client";
+
 import productShowcase from "@/assets/productShowcase.png"
 import napkinFlow from "@/assets/napkin-ecosystem.png";
-import napkinAnalytics from "@/assets/napkin-analytics.png";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const ProductShowcase = () => {
+    // 3 const for parallax effect
+    const napkinRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+      target: napkinRef,
+      offset: ["start end", "end start"],
+    });
+    const translateY = useTransform(scrollYProgress, [0, 1], [-60, 120]);
+
   return (
-    <section className="bg-gradient-to-b from-[#ffffff] to-[#D2DCFF] py-24">
+    <section ref={napkinRef} className="bg-gradient-to-b from-[#ffffff] to-[#D2DCFF] py-24">
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
@@ -19,7 +31,14 @@ export const ProductShowcase = () => {
             for you. Give you the feedback and insight to improve your business.
           </p>
         </div>
-        <Image src={napkinFlow} alt="Napkin Flow" className="mt-10 mb-20 mx-auto" />
+        <motion.img 
+          src={napkinFlow.src} 
+          alt="Napkin Flow" 
+          className="mt-10 mb-20 mx-auto"
+          style={{
+            translateY
+          }}
+        />
         
         <div className="section-heading">
           <div className="flex justify-center">

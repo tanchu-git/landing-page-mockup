@@ -1,11 +1,24 @@
+"use client";
+
 import ArrowRight from "@/assets/arrow-right.svg";
 import bipcardsPhone from "@/assets/bipcards_phone.png";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const Hero = () => {
+  // 3 const for parallax effect
+  const heroRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end", "end start"],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [250, -150]);
+
   return (
     // section background gradient styling
-    <section className="pt-8 pb-20 overflow-x-clip
+    <section ref={heroRef} className="pt-8 pb-20 overflow-x-clip
       bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_70%)]">
       <div className="container">
         {/* md:flex - all elements are inlined as long as screen > medium sized */}
@@ -31,7 +44,17 @@ export const Hero = () => {
             </div>
           </div>          
           <div className="mt-20 md:mt-0 md:ml-7 md:flex relative">            
-            <Image src={bipcardsPhone} alt="Bipcards Phone" />           
+            <motion.img 
+              src={bipcardsPhone.src} 
+              alt="Bipcards Phone"
+              animate={{ translateY: [-5, 5] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 4,
+                ease:"easeInOut"
+              }}
+            />           
           </div>          
         </div>
       </div>
