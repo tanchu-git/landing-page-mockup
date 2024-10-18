@@ -2,19 +2,22 @@
 
 import productShowcase from "@/assets/productShowcase.png"
 import napkinFlow from "@/assets/napkin-ecosystem.png";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import google from "@/assets/bipcards_google.webp";
+import brick from "@/assets/bipcards_brick.webp";
+import insta from "@/assets/bipcards_insta.webp";
+import tripadvisor from "@/assets/bipcards_tripadvisor.webp";
+import trustpilot from "@/assets/bipcards_trustpilot.webp";
+import yelp from "@/assets/bipcards_yelp.webp";
+import { useState } from "react";
+import { motion, useScroll, useTransform, wrap, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 
 export const ProductShowcase = () => {
-    // 3 const for parallax effect
-    const napkinRef = useRef(null);
+  const napkinRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const scaleXY = useTransform(scrollYProgress, [0, 0.15], [0.6, 1]);
 
-    const { scrollYProgress } = useScroll({
-      target: napkinRef,
-      offset: ["start end", "end start"],
-    });
-    const translateY = useTransform(scrollYProgress, [0, 1], [-60, 120]);
+  const images = [brick.src, google.src, insta.src, yelp.src, tripadvisor.src, trustpilot.src];
 
   return (
     <section ref={napkinRef} className="bg-gradient-to-b from-[#ffffff] to-[#D2DCFF] py-24">
@@ -36,10 +39,11 @@ export const ProductShowcase = () => {
           alt="Napkin Flow" 
           className="mt-10 mb-20 mx-auto"
           style={{
-            translateY
-          }}
+            scaleX: scaleXY,
+            scaleY: scaleXY
+          }}          
         />
-        
+             
         <div className="section-heading">
           <div className="flex justify-center">
             <div className="tag">Explore your business data</div>
@@ -52,7 +56,12 @@ export const ProductShowcase = () => {
             help you focus on the essentials, and guide you towards growth.
           </p>
         </div>
-        <Image src={productShowcase} alt="Product Image" className="mt-10 mx-auto" />
+        <motion.img 
+          src={productShowcase.src} 
+          alt="Product Image" 
+          className="mt-10 mx-auto"
+          whileHover={{ scale: 1.1 }}
+        />
       </div>
     </section>
   )
